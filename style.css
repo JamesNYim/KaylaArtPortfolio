@@ -11,112 +11,22 @@ body {
     background-color: #FFF;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 15rem;
-    background-color: #c5dac1; 
-    position: fixed;
-    padding-left: 2%;
-    padding-right: 4%;
-    padding-top: 8%;
+.home {
+    margin-left: 15rem;
+    padding: 20px;
 }
 
-.navbar .nameTag{
-   width: 100%;
-   height: auto; 
-}
 
-.navbar .nameTag img {
-    width: 100%;
-    height: auto;
+@media only screen and (max-width: 768px) {
+    .home {
+        margin-left: 0;
+        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
+        margin-top: 15px;
+    }
 }
-
-.navbar ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 5%;
-}
-
-.navbar ul li {
-    list-style: none;
-    scroll-behavior: smooth;
-    padding: 5%;
-    text-align: center;
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-}
-
-.navbar p{
-    text-align: center;
-    font-size: 12px;
-    margin: 5%;
-}
-
 /* gallery.css */
 
 /* Base styles for the gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    justify-items: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.gallery li {
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    list-style: none;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 8px; /* Gives a smooth corner to gallery items */
-}
-
-/* Styles for images within the gallery */
-.gallery li img {
-    display: block;
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease;
-    object-fit: cover; /* Ensures full coverage of the grid item */
-    border-radius: inherit;
-}
-
-/* Classes to determine special positioning based on aspect ratio */
-.gallery li.wide {
-    grid-column: span 2; /* Span twice the space horizontally */
-    grid-row: span 1;
-}
-
-.gallery li.tall {
-    grid-column: span 1;
-    grid-row: span 2; /* Span twice the space vertically */
-}
-
-.gallery li.normal {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-/* Hover effects to bring interactivity */
-.gallery li:hover {
-    transform: scale(1.05);
-    z-index: 1; /* Bring the hovered item to the top */
-}
-
-.gallery li img:hover {
-    transform: scale(1.1);
-}
-
 
 
 

@@ -4,6 +4,10 @@
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device=width, initial-scale=1.0">
         <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "css/gallery.css">
+        <link rel = "stylesheet" href = "css/navbar.css">
+
+
     </head>
 
     <body>
@@ -11,7 +15,10 @@
             <div class = "nameTag">
                 <img src = "UI Elements/name_card.png">
             </div>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+            <ul class = "menu">
                 <li><a href = "#home">Home</a></li>
                 <li><a href = "#">Work</a></li>
                 <li><a href = "#">About</a></li>
@@ -20,9 +27,8 @@
         </div>
 
         <div class = "home">
-            <p id="home"></p>
             <ul class= "gallery">
-                <li><li><img src="artwork/IMG_6388.jpg"></li></li>
+                <li><img src="artwork/IMG_6388.jpg"></li>
                 <li><img src="artwork/IMG_6268.jpg"></li>
                 <li><img src="artwork/IMG_6758.jpg"></li>
                 <li><img src="artwork/IMG_6374.jpg"></li>
@@ -30,6 +36,7 @@
             </ul>
         </div>
         <script src="js/gallery.js" defer></script>
+        <script src="js/navbar.js" defer></script>
         <script src="js/app.js" defer></script>
     </body>
 </html>

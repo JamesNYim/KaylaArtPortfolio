@@ -1,0 +1,105 @@
+/* Base Sidebar Styles */
+.navbar {
+    box-sizing: border-box;
+    background-color: #c5dac1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    transition: all 0.3s ease; /* Transition for smooth animation */
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Default styles for sidebar items */
+.nameTag {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nameTag img {
+    max-width: 80%;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        max-height: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        overflow: visible;
+    }
+
+     .nameTag {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .nameTag img {
+        max-width: 80%;
+        max-height: 150px;
+        height: auto;
+    }   
+
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+    }
+
+    .menu {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Adjust for showing menu below navbar */
+        left: 0;
+        background-color: #c5dac1;
+        width: 100vw;
+        text-align: center;
+        transition: max-height 0.3s ease; /* Animate height for mobile menu */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when in active state */
+    }
+}
+
+/* Home content adjustment for larger sidebar */
+.home {
+    transition: margin-left 0.3s ease; /* Smooth transition when layout changes */
+}

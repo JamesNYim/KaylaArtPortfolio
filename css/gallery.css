@@ -1,0 +1,55 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.gallery li {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px; /* Gives a smooth corner to gallery items */
+}
+
+/* Styles for images within the gallery */
+.gallery li img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensures full coverage of the grid item */
+    border-radius: inherit;
+}
+
+/* Classes to determine special positioning based on aspect ratio */
+.gallery li.wide {
+    grid-column: span 2; /* Span twice the space horizontally */
+    grid-row: span 1;
+}
+
+.gallery li.tall {
+    grid-column: span 1;
+    grid-row: span 2; /* Span twice the space vertically */
+}
+
+.gallery li.normal {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Hover effects to bring interactivity */
+.gallery li:hover {
+    transform: scale(1.05);
+    z-index: 1; /* Bring the hovered item to the top */
+}
+
+.gallery li img:hover {
+    transform: scale(1.1);
+}
+
+
