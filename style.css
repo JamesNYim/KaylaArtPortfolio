@@ -1,4 +1,5 @@
 *{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -59,26 +60,64 @@ body {
     margin: 5%;
 }
 
-.home{
-    display: flex;
-    margin-left: 15rem;
-    height: 100%;
+/* gallery.css */
+
+/* Base styles for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding: 20px;
+    width: 100%;
 }
 
-.home .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-}
-
-.home .gallery li {
+.gallery li {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
     list-style: none;
-    margin: 5px;
-    max-height: 450px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px; /* Gives a smooth corner to gallery items */
 }
-.home .gallery li img{
-    max-width: 100%;
-    max-height: 450px;
-    height: auto;
+
+/* Styles for images within the gallery */
+.gallery li img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensures full coverage of the grid item */
+    border-radius: inherit;
 }
+
+/* Classes to determine special positioning based on aspect ratio */
+.gallery li.wide {
+    grid-column: span 2; /* Span twice the space horizontally */
+    grid-row: span 1;
+}
+
+.gallery li.tall {
+    grid-column: span 1;
+    grid-row: span 2; /* Span twice the space vertically */
+}
+
+.gallery li.normal {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Hover effects to bring interactivity */
+.gallery li:hover {
+    transform: scale(1.05);
+    z-index: 1; /* Bring the hovered item to the top */
+}
+
+.gallery li img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
