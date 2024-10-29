@@ -1,6 +1,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: auto;
     gap: 10px;
     justify-items: center;
     padding: 20px;
@@ -14,6 +15,10 @@
     list-style: none;
     transition: transform 0.3s ease-in-out;
     border-radius: 8px; /* Gives a smooth corner to gallery items */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* Styles for images within the gallery */
@@ -28,13 +33,7 @@
 
 /* Classes to determine special positioning based on aspect ratio */
 .gallery li.wide {
-    grid-column: span 2; /* Span twice the space horizontally */
-    grid-row: span 1;
-}
-
-.gallery li.tall {
-    grid-column: span 1;
-    grid-row: span 2; /* Span twice the space vertically */
+    grid-column-end: span 2; /* Span twice the space horizontally */
 }
 
 .gallery li.normal {
