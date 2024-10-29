@@ -91,15 +91,15 @@
         background-color: #c5dac1;
         width: 100vw;
         text-align: center;
+        max-height: 0;
         transition: max-height 0.3s ease; /* Animate height for mobile menu */
     }
 
     .menu.active {
         display: flex; /* Show menu when in active state */
+        max-height: 200px;
     }
 }
 
 /* Home content adjustment for larger sidebar */
-.home {
-    transition: margin-left 0.3s ease; /* Smooth transition when layout changes */
-}
+
