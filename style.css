@@ -16,12 +16,24 @@ body {
     padding: 20px;
 }
 
+.bio {
+    padding: 20px;
+    margin-left: 15rem;
+    text-align: center;
+}
+
 
 @media only screen and (max-width: 768px) {
     .home {
         margin-left: 0;
         transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
         margin-top: 15px;
+    }
+
+    .bio {
+        margin-left: 0;
+        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
+        margin-top: 35px;
     }
 }
 /* gallery.css */
