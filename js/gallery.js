@@ -3,6 +3,7 @@ class PuzzleGallery {
         this.container = document.querySelector(container); // Corrected 'querySelector'
         if (this.container) {
             this.resizeImages();
+            this.setupModal();
             window.addEventListener('resize', () => this.resizeImages());
         }
     }
@@ -33,6 +34,33 @@ class PuzzleGallery {
             item.classList.add('normal');
             console.log(`Applied "normal" class to ${img.src}`);
         }
+    }
+
+    setupModal() {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeBtn = modal.querySelector(".close");
+
+        // Add click event to all gallery images
+        this.container.querySelectorAll("img").forEach(img => {
+            img.addEventListener("click", () => {
+                console.log("Clicked an image: ", img.src);
+                modal.style.display = "flex";
+                modalImage.src = img.src;
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
     }
 }
 
