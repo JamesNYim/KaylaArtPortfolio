@@ -1,0 +1,46 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family" */
+}
+
+body {
+    height: 100vh;
+    background-color: #FFF;
+    margin: 0;
+}
+
+.home {
+    margin-left: 15rem;
+    padding: 20px;
+}
+
+.bio {
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 25rem;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .home {
+        margin-left: 0;
+        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
+        margin-top: 15px;
+    }
+
+    .bio {
+        margin-left: 0;
+        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
+        margin-top: 35px;
+    }
+
+}
+
+
+
+
+
