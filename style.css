@@ -9,6 +9,7 @@
 body {
     height: 100vh;
     background-color: #FFF;
+    margin: 0;
 }
 
 .home {
