@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device=width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "../../style.css">
+        <link rel = "stylesheet" href = "../../css/gallery.css">
+        <link rel = "stylesheet" href = "../../css/navbar.css">
+    </head>
+
+    <body>
+        <div class = "navbar">
+            <div class = "nameTag">
+                <img src = "../../UI Elements/name_card.png">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class = "menu">
+                <li><a href = "../home/home.html">Home</a></li>
+                <li><a href = "">Work</a></li>
+                <li><a href = "../contact/contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class = "home">
+            <ul class= "gallery">
+                <li><img src="../../artwork/IMG_6388.jpg"></li>
+                <li><img src="../../artwork/IMG_6268.jpg"></li>
+                <li><img src="../../artwork/IMG_6758.jpg"></li>
+                <li><img src="../../artwork/IMG_6374.jpg"></li>
+                <li><img src="../../artwork/Law_character_design_sheet.png"></li>
+                <li><img src="../../artwork/Law_Retro_Computer_Final.png"></li>
+            </ul>
+        </div>
+
+        <!-- Modal for Expanded Images -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Expanded Image">
+        </div>
+        <script src="../../js/gallery.js" defer></script>
+        <script src="../../js/navbar.js" defer></script>
+        <script src="js/app.js" defer></script>
+    </body>
+</html>
