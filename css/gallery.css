@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-auto-rows: auto;
-    gap: 10px;
+    gap: 20px 80px;
     justify-items: center;
     padding: 20px;
     width: 100%;
@@ -23,8 +23,8 @@
 */
 
 .gallery li {
-    width: 150px; /* Set a fixed square size */
-    height: 150px;
+    width: 240px; /* Set a fixed square size */
+    height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -19,13 +19,13 @@
 /* Default styles for sidebar items */
 .nameTag {
     width: 100%;
+    font-family: "Caveat", serif;
+    font-size: 72px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.nameTag img {
-    max-width: 80%;
-    height: auto;
+.nameTag {
 }
 
 .menu-toggle {
@@ -36,6 +36,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin-top: auto;
 }
 
 .menu li {
