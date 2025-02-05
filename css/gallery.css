@@ -8,38 +8,51 @@
     width: 100%;
 }
 
+/*
 .gallery li {
     position: relative;
     overflow: hidden;
     margin: 0;
     list-style: none;
     transition: transform 0.3s ease-in-out;
-    border-radius: 8px; /* Gives a smooth corner to gallery items */
+    border-radius: 8px;  Gives a smooth corner to gallery items 
     overflow: hidden;
     justify-content: center;
     align-items: center;
+}
+*/
 
+.gallery li {
+    width: 150px; /* Set a fixed square size */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 /* Styles for images within the gallery */
 .gallery li img {
     display: block;
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
     transition: transform 0.3s ease;
     object-fit: cover; /* Ensures full coverage of the grid item */
     border-radius: inherit;
 }
 
-/* Classes to determine special positioning based on aspect ratio */
+/* Classes to determine special positioning based on aspect ratio 
 .gallery li.wide {
     grid-column-end: span 2; /* Span twice the space horizontally */
 }
 
+/*
 .gallery li.normal {
     grid-column: span 1;
     grid-row: span 1;
 }
+*/
 
 /* Hover effects to bring interactivity */
 .gallery li:hover {

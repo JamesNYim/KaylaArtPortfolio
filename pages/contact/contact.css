@@ -1,9 +1,9 @@
 *{
 
+    font-family: "Caveat", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family" */
 }
 
 body {
@@ -12,18 +12,62 @@ body {
     margin: 0;
 }
 
-.home {
-    margin-left: 15rem;
-    padding: 20px;
-}
-
-.bio {
+.content {
     font-size: 20px;
-    padding: 20px;
-    margin-left: 25rem;
+    padding: 50px;
+    margin-left: 15rem;
     text-align: center;
 }
 
+.bio {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.bioText {
+    font-size: 24px;
+    margin-left: 5%;
+    text-align: left;
+}
+.bioPhoto {
+    width: auto;
+    height: 40rem;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5% 10%;
+}
+
+.resources .email {
+    font-size: 36px;
+}
+
+.resources .links {
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.resources .links a {
+    width: auto;
+    padding: 10px 20px;
+    margin: 0px 40%;
+    border-radius: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.resources .links a:hover {
+    background-color: #f0f0f0;
+    color: #fff;
+}
 
 @media only screen and (max-width: 768px) {
     .home {

@@ -44,9 +44,10 @@
 }
 
 .menu li a {
+    font-family: "Caveat", serif;
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 /* Mobile Styles */
