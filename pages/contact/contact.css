@@ -68,22 +68,42 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Mobile Styles */
 @media only screen and (max-width: 768px) {
-    .home {
+    .content {
+        padding: 20px;
         margin-left: 0;
-        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
-        margin-top: 15px;
     }
 
     .bio {
-        margin-left: 0;
-        transition: margin-left 0.5s ease; /* Smooth transition when layout changes */
+        flex-direction: column;
         margin-top: 35px;
+        gap: 1rem;
     }
 
+    .bioText {
+        font-size: 20px;
+        order: 2; /* Makes text appear below image */
+    }
+
+    .bioPhoto {
+        height: auto;
+        width: auto;
+        max-height: 30rem;
+        order: 1; /* Makes image appear above text */
+    }
+
+    .resources {
+        margin: 10% 5%;
+    }
+
+    .resources .email {
+        font-size: 24px;
+    }
+
+    .resources .links a {
+        width: 90%;
+        margin: 5px auto;
+        text-align: center;
+    }
 }
-
-
-
-
-
