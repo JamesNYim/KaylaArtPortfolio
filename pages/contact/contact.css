@@ -71,6 +71,11 @@ body {
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
     .content {
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .content {
         padding: 20px;
         margin-left: 0;
     }
@@ -87,9 +92,11 @@ body {
     }
 
     .bioPhoto {
+        padding-top: 5px;
         height: auto;
         width: auto;
-        max-height: 30rem;
+        max-height: 100%;
+        max-width: 100%;
         order: 1; /* Makes image appear above text */
     }
 
