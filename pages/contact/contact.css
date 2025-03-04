@@ -23,11 +23,16 @@ body {
     margin-top: 1rem;
     display: flex;
 }
-
+.bioInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
 .bioText {
     font-size: 24px;
-    margin-left: 5%;
     text-align: center;
+    width: 80%;
 }
 .bioPhoto {
     width: auto;
@@ -35,28 +40,26 @@ body {
 }
 
 .resources {
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5% 10%;
 }
 
 .resources .email {
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .resources .links {
-    margin-top: 10px;
+    margin-top: 5px;
     justify-content: center;
     flex-direction: column;
     display: flex;
-    gap: 10px;
 }
 
 .resources .links a {
     width: auto;
-    padding: 10px 20px;
-    margin: 0px 40%;
+    padding: 5px 20px;
     border-radius: 10px;
     font-size: 24px;
     text-decoration: none;
@@ -86,9 +89,11 @@ body {
         gap: 1rem;
     }
 
+    .bioInfo {
+        order: 2;
+    }
     .bioText {
         font-size: 20px;
-        order: 2; /* Makes text appear below image */
     }
 
     .bioPhoto {
